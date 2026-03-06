@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1> &#127919;QUIZ APP</h1>
+  <h3>choose settings</h3>
+  <label> category:
+    <select id = "category">
+        <option>general knowledge</option>
+        <option>computer science</option>
+        <option>sports</option>
+        <option>history</option>
+    </select>
+  </label><br>
+  <label> difficulty level:
+    <select id="difficulty level">
+        <option>easy</option>
+        <option>medium</option>
+        <option>hard</option>
+    </select>
+  </label><br>
+  <button id="start btn">Start Quiz</button>
+  <!--Quiz-->
+  <div id="quiz"class="hidden">
+    <div class="timer">&#9203; Time left:<span id="time">15</span></div>
+    <div id="questionContainer">
+      <div class="question"id="question"></div>
+      <div class="options" id="options"></div>
+    </div>
+  </div>
+
+  <!--Result-->
+  <div id="result" class="hidden">
+    <h2>Quiz Finished🎉</h2>
+    <p id="score"></p>
+    <input type="text" id="username" placeholder="Enter your name">
+    <button id="saveScoreBtn">Save Score</button><br><br>
+    <button onclick="resultQuiz()">Result Quiz</button>
+  </div>
+
+  <!-- Leaderboard -->
+    <div class="leaderboard">
+      <h3>🏆 Leaderboard</h3>
+      <ul id="leaderboardList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
